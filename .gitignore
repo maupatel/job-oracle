@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Personal / runtime state — never commit
+# (profile.json = your real resume + email; template is profile.example.json)
+data/profile.json
+data/applications.json
+data/seen.json
+data/incoming.txt
+data/email_body.txt
+
+# Secrets
+.streamlit/secrets.toml
+.env

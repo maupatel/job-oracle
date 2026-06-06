@@ -1,0 +1,38 @@
+{
+  "name": "[Your Name]",
+  "current_role": "Senior Data Analyst",
+  "education": "M.S. (STEM)",
+  "target_titles": [
+    "Senior Data Analyst",
+    "Data Engineer",
+    "Business Analyst",
+    "BI Analyst"
+  ],
+  "min_salary": 120000,
+  "max_commute_minutes": 90,
+  "willing_to_relocate": true,
+  "prefers_remote": true,
+  "preferred_job_types": ["fulltime"],
+  "skills": [
+    "AWS", "S3", "Lambda", "Data Mining", "A/B Testing", "Python", "Pandas",
+    "NumPy", "Scikit-Learn", "PyTorch", "OpenAI API", "SAS", "Power BI",
+    "Looker", "Data Warehousing", "Time-Series Forecasting", "Hive",
+    "NoSQL", "MongoDB", "Alteryx", "Machine Learning", "Process Automation",
+    "Java", "SQL", "Snowflake", "Redshift", "PostgreSQL", "MySQL", "Oracle",
+    "Predictive Modeling", "Clustering", "K-Means", "Excel", "Power Query",
+    "VBA", "Fraud Detection", "Statistical Analysis", "LLM", "Tableau",
+    "QlikView", "R", "Hadoop", "Databricks", "ETL", "BI", "Analytics"
+  ],
+  "headline": "Senior Data Analyst with 6+ years turning messy, large-scale data into decisions across fraud, operations, and process optimization.",
+  "experience_highlights": [
+    "Built fraud-detection and process-optimization analytics in Python and SQL (Snowflake/Redshift), surfacing patterns across millions of transactions.",
+    "Delivered resource and operations analytics and forecasting that informed leadership decisions.",
+    "Fluent across the modern data stack: SQL, Python (Pandas/Scikit-Learn/PyTorch), AWS, Snowflake/Databricks, and BI tools (Tableau, Power BI, Looker)."
+  ],
+  "contact_line": "your.email@example.com",
+  "title_keywords": [
+    "data analyst", "data engineer", "business analyst", "bi analyst",
+    "business intelligence", "analytics", "data scientist", "insights"
+  ],
+  "seniority_keywords": ["senior", "sr.", "sr ", "lead", "principal", "staff"]
+}
