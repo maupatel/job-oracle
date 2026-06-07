@@ -1,17 +1,36 @@
 # 🧭 JobOracle
 
-A local job-search command center for a Senior Data Analyst / Data Engineer job hunt.
-Pulls live Indeed listings, scores each against your resume, and tracks your
-applications — all running on your machine, free, no accounts.
+A multi-user job-search web app. Sign up, upload your resume, and JobOracle
+aggregates live job listings, scores each against your background, and drafts
+tailored cover letters you can download as PDF or Word.
 
-## What it does (Stage 1 — done)
-- **Aggregate**: live jobs across your 4 target titles (Senior Data Analyst,
-  Data Engineer, Business Analyst, BI Analyst), deduped.
-- **Match**: a transparent 0–100 fit score per job (title + pay + type + skills),
-  with a plain-English "why" for each. Filters for score, remote, salary floor,
-  full-time, keyword.
-- **Track**: Saved → Applied → Interviewing → Offer / Rejected board with notes,
-  saved to `data/applications.json`.
+## What it does
+- **Accounts**: sign up / log in; each user gets their own profile, jobs, and
+  tracker (SQLite via `store.py`, PBKDF2-hashed passwords).
+- **Onboarding**: enter your name + upload a resume (PDF / DOCX / TXT). JobOracle
+  extracts your skills and target titles automatically (`resume_parse.py`).
+- **Aggregate**: live jobs from **JSearch** (LinkedIn, Indeed, Glassdoor,
+  ZipRecruiter) + **Adzuna**, merged and deduped (`sources.py`). Falls back to a
+  bundled snapshot when no API keys are set, so it always works.
+- **Match**: a transparent 0–100 fit score per job (title + pay + type + skills)
+  with a plain-English "why". Filters for score, remote, salary floor, keyword.
+- **Apply-assist**: a tailored cover letter built from your resume + the job's
+  overlapping skills. No dashes, clean grammar. Edit it, then download as
+  **PDF** or **Word** (`apply_assist.py`, `export.py`).
+- **Track**: personal Saved → Applied → Interviewing → Offer / Rejected board.
+
+## Data sources / API keys
+Set keys in `.streamlit/secrets.toml` locally (see `secrets.toml.example`) or in
+Streamlit Cloud → Settings → Secrets:
+- `RAPIDAPI_KEY` — JSearch (free tier at rapidapi.com)
+- `ADZUNA_APP_ID`, `ADZUNA_APP_KEY` — Adzuna (free at developer.adzuna.com)
+
+No keys? The app runs on the bundled `data/jobs.json` snapshot.
+
+> **Hosting note:** on Streamlit Community Cloud the filesystem is ephemeral, so
+> the SQLite accounts DB resets when the app restarts/sleeps. For durable
+> multi-user data, set `JOBORACLE_DB` to a persistent path or swap `store.py`'s
+> connection for a hosted Postgres (Supabase / Neon free tier).
 
 ## Run it locally
 ```

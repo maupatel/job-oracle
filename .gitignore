@@ -12,6 +12,8 @@ data/applications.json
 data/seen.json
 data/incoming.txt
 data/email_body.txt
+data/joboracle.db
+*.db
 
 # Secrets
 .streamlit/secrets.toml
