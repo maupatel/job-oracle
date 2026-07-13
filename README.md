@@ -1,5 +1,9 @@
 # 🧭 JobOracle
 
+![License](https://img.shields.io/github/license/maupatel/job-oracle)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![Streamlit](https://img.shields.io/badge/built%20with-Streamlit-FF4B4B)
+
 A multi-user job-search web app. Sign up, upload your resume, and JobOracle
 aggregates live job listings, scores each against your background, and drafts
 tailored cover letters you can download as PDF or Word.
